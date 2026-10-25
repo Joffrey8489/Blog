@@ -1,0 +1,65 @@
+<header class="relative h-[50vh] min-h-[400px] w-full overflow-hidden">
+
+  <!-- Slides -->
+  @for (slide of slides; track $index) {
+    <div
+      class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+      [class.opacity-100]="currentSlide === $index"
+      [class.opacity-0]="currentSlide !== $index"
+    >
+
+      <!-- Imagem -->
+      <img
+        [src]="slide.image"
+        [alt]="slide.title"
+        class="h-full w-full object-cover"
+      />
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <!-- Texto -->
+      <div class="absolute inset-0 flex items-center justify-center text-center">
+        <div class="max-w-3xl px-6 text-white">
+
+          <h1 class="mb-4 text-4xl font-bold md:text-6xl">
+            {{ slide.title }}
+          </h1>
+
+          <p class="mb-6 text-lg text-gray-200 md:text-xl">
+            {{ slide.description }}
+          </p>
+
+          <button
+            class="rounded-lg bg-blue-600 px-6 py-3 font-semibold
+                   transition duration-300 hover:bg-blue-700"
+          >
+            Saiba mais
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  }
+
+  <!-- Indicadores -->
+  <div
+    class="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2"
+  >
+
+    @for (slide of slides; track $index) {
+      <button
+        (click)="goToSlide($index)"
+        class="h-3 rounded-full transition-all duration-300"
+        [class.w-8]="currentSlide === $index"
+        [class.w-3]="currentSlide !== $index"
+        [class.bg-white]="currentSlide === $index"
+     [style.background-color]="currentSlide !== $index ? 'rgba(255,255,255,0.5)' : 'white'"
+        aria-label="Ir para slide"
+      ></button>
+    }
+
+  </div>
+
+</header>

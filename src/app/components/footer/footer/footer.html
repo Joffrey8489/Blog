@@ -1,0 +1,178 @@
+<footer class="bg-black text-white mt-20">
+
+  <div class="max-w-7xl mx-auto px-8 py-12">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Sobre -->
+      <div>
+
+        <h3 class="text-2xl font-bold text-blue-400 mb-4">
+          Joffrey Sewane
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed">
+          Software Engineer especializado em desenvolvimento web,
+          aplicações modernas e soluções inteligentes.
+        </p>
+
+      </div>
+
+      <!-- Contactos -->
+      <div>
+
+        <h3 class="text-xl font-semibold mb-4">
+          Contactos
+        </h3>
+
+        <div class="space-y-3">
+
+          <p class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-blue-400"></i>
+            jofreylourenco50@gmail.com
+          </p>
+
+          <p class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-blue-400"></i>
+            +258 848 917 703
+          </p>
+
+          <p class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-blue-400"></i>
+            +258 833 422 782
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Localização -->
+      <div>
+
+        <h3 class="text-xl font-semibold mb-4">
+          Localização
+        </h3>
+
+        <div class="flex gap-3 text-gray-300">
+
+          <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
+
+          <div>
+            Khongolote <br>
+            Matola <br>
+            Maputo <br>
+            Moçambique
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Redes -->
+      <div>
+
+        <h3 class="text-xl font-semibold mb-4">
+          Redes Sociais
+        </h3>
+
+        <div class="flex gap-5 text-3xl">
+
+          <a
+            href="https://www.linkedin.com/in/jofrey-lourenco-sewane-3559a6325"
+            target="_blank"
+            class="hover:text-blue-400 transition"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a   href="https://www.instagram.com/Joffrey.Sewane"
+           class="hover:text-pink-800 transition">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a     href="https://www.facebook.com/Joffrey.Sewane"
+          class="hover:text-blue-500 transition">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+       <a
+  href="https://github.com/Joffrey8489"
+  target="_blank"
+  class="hover:text-gray-400 transition"
+>
+  <i class="fa-brands fa-github"></i>
+</a>
+<a
+  href="https://wa.me/258848917703"
+  target="_blank"
+  class="hover:text-green-500 transition"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+ <a
+    href="mailto:jofreylourenco50@gmail.com"
+     class="hover:text-blue-500 transition"
+    title="Enviar Email"
+  >
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Tecnologias -->
+    <div class="border-t border-gray-800 mt-10 pt-8">
+
+      <h3 class="text-xl font-semibold mb-4">
+        Tecnologias Utilizadas
+      </h3>
+
+      <div class="flex flex-wrap gap-3">
+
+        @for (tech of tecnologias; track $index) {
+          <span
+            class="rounded-full bg-gray-900 px-4 py-2 text-gray-300"
+          >
+            {{ tech }}
+          </span>
+        }
+
+      </div>
+
+    </div>
+
+    <!-- Apoios -->
+    <div class="border-t border-gray-800 mt-10 pt-8">
+
+      <h3 class="text-xl font-semibold mb-4">
+        Apoios
+      </h3>
+
+      <div class="flex flex-wrap gap-3">
+
+        @for (apoio of apoios; track $index) {
+          <span
+            class="rounded-full bg-gray-900 px-4 py-2 text-gray-300"
+          >
+            {{ apoio }}
+          </span>
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div
+    class="border-t text-red-900 border-gray-800 py-5
+           text-center text-gray-400"
+  >
+    © 2026 Joffrey Sewane Blog.
+    Todos os direitos reservados.
+  </div>
+
+</footer>
